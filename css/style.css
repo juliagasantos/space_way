@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-size: 1rem;
+    font-family: 'Exo 2', sans-serif;
+}
+
+:root {
+    --clr-white: #ffffff;
+    --clr-white-transparent: #ffffff33;
+    --clr-blue-mist: #9fc1ff;
+    --clr-deep-space: #031553;
+    --clr-transparent: transparent;
+}
+
+body {
+    background-image: url('../img/bgTravel.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+/* #region header */
+
+header {
+    & nav {
+        align-items: center;
+        height: 10vh;
+        display: flex;
+        justify-content: space-around;
+
+        .logo {
+            cursor: pointer;
+
+            & img {
+                transition: transform .3s ease-in-out, filter .3s ease-in-out;
+                width: 150px;
+
+                &:hover {
+                    filter: brightness(50%) sepia(1) saturate(4) hue-rotate(180deg);
+                    transform: scale(1.2);
+                }
+            }
+
+        }
+
+        .menu {
+            & ul {
+                & li {
+                    display: flex;
+                    gap: 1em;
+
+                    & a {
+                        color: var(--clr-white);
+                        padding: 1.5em 1em;
+                        transition: transform .3s ease-in-out, color .3s ease-in-out;
+                        ;
+
+                        &:hover {
+                            color: var(--clr-blue-mist);
+                            transform: scale(1.2);
+                        }
+
+                    }
+
+                    .getStarted {
+                        display: flex;
+                        align-items: center;
+
+                        & a {
+                            transition: transform .3s ease-in-out, background .3s ease-in-out, color .3s ease-in-out;
+                            background: var(--clr-white-transparent);
+                            border-radius: 0.5em;
+                            padding: 0.8em 1.5em;
+
+                            &:hover {
+                                background: var(--clr-blue-mist);
+                                color: var(--clr-deep-space);
+                                transform: scale(1.1);
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+/* #endregion header */
+
+/* #region home */
+
+#home {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+    justify-content: center;
+gap: 2.5em;
+    .homeContainerTxt {
+        & ul {
+            & li {display: flex;
+                flex-direction: column;
+                gap: 0.2em;
+                width: 300px;
+                & p {
+                    color: var(--clr-white);
+                    margin: 0.3em;
+                }
+
+                & h1 {
+                    color: var(--clr-white);
+                    font-weight: 200;
+                }
+            }
+        }
+    }
+
+    .homeContainerBtn {
+        display: flex;
+        gap: 2em;
+
+        .getStartedHome {
+            background: var(--clr-white-transparent);
+            padding: 0.8em 1.5em;
+            border-radius: 0.5em;
+            color: var(--clr-white);
+            border: 1px solid var(--clr-transparent);
+            transition: transform .3s ease-in-out;
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+
+        .learnMore {
+            background: var(--clr-transparent);
+            border: 1px solid var(--clr-white-transparent);
+            padding: 0.8em 1.5em;
+            border-radius: 0.5em;
+            color: var(--clr-white);
+            transition: transform .3s ease-in-out;
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+/* #endregion home */
