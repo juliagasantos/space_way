@@ -6,13 +6,17 @@
     list-style: none;
     font-size: 1rem;
     font-family: 'Exo 2', sans-serif;
+    font-weight: 300;
 }
 
 :root {
     --clr-white: #ffffff;
+    --clr-soft-white: #ffffff81;
     --clr-white-transparent: #ffffff33;
     --clr-blue-mist: #9fc1ff;
+    --clr-indigo-vibe: #4744a5;
     --clr-deep-space: #031553;
+    --clr-space-night: #040839;
     --clr-transparent: transparent;
 }
 
@@ -27,6 +31,22 @@ body {
 h1 {
     font-size: 3em;
 }
+
+h2 {
+    font-size: 2em;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 1em;
+    font-weight: 500;
+}
+
 
 /* #region header */
 
@@ -104,56 +124,283 @@ header {
     height: 90vh;
     display: flex;
     flex-direction: column;
-    margin-left: 20%;
     justify-content: center;
+    background: linear-gradient(to top, var(--clr-space-night), var(--clr-transparent), var(--clr-transparent));
+
+    .container-home {
+        margin-left: 20%;
+display: flex;
+flex-direction: column;
 gap: 2.5em;
-    .homeContainerTxt {
-        & ul {
-            & li {display: flex;
-                flex-direction: column;
-                gap: 0.2em;
-                width: 300px;
-                & p {
-                    color: var(--clr-white);
-                    margin: 0.3em;
-                }
+        .homeContainerTxt {
+            & ul {
+                & li {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.2em;
+                    width: 300px;
 
-                & h1 {
-                    color: var(--clr-white);
-                    font-weight: 200;
+                    & p {
+                        color: var(--clr-white);
+                        margin: 0.3em;
+                    }
+
+                    & h1 {
+                        color: var(--clr-white);
+                        font-weight: 200;
+                    }
+                }
+            }
+        }
+
+        .homeContainerBtn {
+            display: flex;
+            gap: 2em;
+
+            .getStartedHome {
+                background: var(--clr-white-transparent);
+                padding: 0.8em 1.5em;
+                border-radius: 0.5em;
+                color: var(--clr-white);
+                border: 1px solid var(--clr-transparent);
+                transition: transform .3s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+
+            .learnMore {
+                background: var(--clr-transparent);
+                border: 1px solid var(--clr-white-transparent);
+                padding: 0.8em 1.5em;
+                border-radius: 0.5em;
+                color: var(--clr-white);
+                transition: transform .3s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.2);
                 }
             }
         }
     }
 
-    .homeContainerBtn {
-        display: flex;
-        gap: 2em;
 
-        .getStartedHome {
-            background: var(--clr-white-transparent);
-            padding: 0.8em 1.5em;
-            border-radius: 0.5em;
-            color: var(--clr-white);
-            border: 1px solid var(--clr-transparent);
-            transition: transform .3s ease-in-out;
-            &:hover{
-                transform: scale(1.2);
-            }
-        }
-
-        .learnMore {
-            background: var(--clr-transparent);
-            border: 1px solid var(--clr-white-transparent);
-            padding: 0.8em 1.5em;
-            border-radius: 0.5em;
-            color: var(--clr-white);
-            transition: transform .3s ease-in-out;
-            &:hover{
-                transform: scale(1.2);
-            }
-        }
-    }
 }
 
 /* #endregion home */
+
+/* #region features*/
+
+#features {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+    background-color: var(--clr-space-night);
+
+    .info-card-section {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+gap: 1em;
+        .glossary{
+            color: var(--clr-indigo-vibe);
+        }
+        & h2{
+            color: var(--clr-white);
+        }
+        .txt-info{
+            color: var(--clr-soft-white);
+            max-width: 600px;
+        }
+    }
+
+    .highlighted-topics {
+        display: flex;
+        flex-direction: column;
+        gap: 4em;
+        justify-content: center;
+        align-items: center;
+
+        .topics-one {
+            display: flex;
+            gap: 1em;
+
+            .pictures-in-the-sky {
+                display: flex;
+                gap: 2em;
+                max-width: 400px;
+
+                .icon-card-pictures-in-the-sky {
+                    .icon {
+                        font-size: 5em;
+                        color: var(--clr-indigo-vibe);
+                    }
+                }
+
+                .txt-card-pictures-in-the-sky {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1em;
+
+                    & h4 {
+                        color: var(--clr-white);
+                    }
+
+                    & p {
+                        color: var(--clr-soft-white);
+                    }
+                }
+            }
+
+            .asteroids-card {
+                display: flex;
+                gap: 2em;
+                max-width: 400px;
+
+                .icon-card-asteroids-card {
+                    .icon {
+                        font-size: 5em;
+                        color: var(--clr-indigo-vibe);
+                    }
+                }
+
+                .txt-card-asteroids-card {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1em;
+
+                    & h4 {
+                        color: var(--clr-white);
+                    }
+
+                    & p {
+                        color: var(--clr-soft-white);
+                    }
+                }
+            }
+
+            .telescopes-glossary {
+                display: flex;
+                gap: 2em;
+                max-width: 400px;
+
+                .icon-card-telescopes-glossary {
+                    .icon {
+                        font-size: 5em;
+                        color: var(--clr-indigo-vibe);
+                    }
+
+                }
+
+                .txt-card-telescopes-glossary {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1em;
+
+                    & h4 {
+                        color: var(--clr-white);
+                    }
+
+                    & p {
+                        color: var(--clr-soft-white);
+                    }
+                }
+            }
+        }
+
+        .topics-two {
+            display: flex;
+            gap: 1em;
+
+            .how-to-look-up {
+                display: flex;
+                gap: 2em;
+                max-width: 400px;
+
+                .icon-card-how-to-look-up {
+                    .icon {
+                        font-size: 5em;
+                        color: var(--clr-indigo-vibe);
+                    }
+                }
+
+                .txt-card-how-to-look-up {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1em;
+
+                    & h4 {
+                        color: var(--clr-white);
+                    }
+
+                    & p {
+                        color: var(--clr-soft-white);
+                    }
+                }
+            }
+
+            .space-final-frontier {
+                display: flex;
+                gap: 2em;
+                max-width: 400px;
+
+                .icon-card-space-final-frontier {
+                    .icon {
+                        font-size: 5em;
+                        color: var(--clr-indigo-vibe);
+                    }
+                }
+
+                .txt-card-space-final-frontier {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1em;
+
+                    & h4 {
+                        color: var(--clr-white);
+                    }
+
+                    & p {
+                        color: var(--clr-soft-white);
+                    }
+                }
+            }
+
+            .getting-a-telescope {
+                display: flex;
+                gap: 2em;
+                max-width: 400px;
+
+                .icon-card-getting-a-telescope {
+                    .icon {
+                        font-size: 5em;
+                        color: var(--clr-indigo-vibe);
+                    }
+                }
+
+                .txt-card-getting-a-telescope {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1em;
+
+                    & h4 {
+                        color: var(--clr-white);
+                    }
+
+                    & p {
+                        color: var(--clr-soft-white);
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+
+/* #endregion features*/
