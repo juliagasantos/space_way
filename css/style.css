@@ -44,7 +44,7 @@ h3 {
 
 h4 {
     font-size: 1em;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 
@@ -129,9 +129,10 @@ header {
 
     .container-home {
         margin-left: 20%;
-display: flex;
-flex-direction: column;
-gap: 2.5em;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5em;
+
         .homeContainerTxt {
             & ul {
                 & li {
@@ -205,14 +206,17 @@ gap: 2.5em;
         text-align: center;
         align-items: center;
         justify-content: center;
-gap: 1em;
-        .glossary{
+        gap: 1em;
+
+        .glossary {
             color: var(--clr-indigo-vibe);
         }
-        & h2{
+
+        & h2 {
             color: var(--clr-white);
         }
-        .txt-info{
+
+        .txt-info {
             color: var(--clr-soft-white);
             max-width: 600px;
         }
@@ -404,3 +408,78 @@ gap: 1em;
 
 
 /* #endregion features*/
+
+
+#beyond-horizon {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    background: var(--clr-space-night);
+
+    .container-beyond-horizon-txt {
+        max-width: 550px;
+        display: flex;
+        flex-direction: column;
+        gap: 4em;
+
+        .text-beyond-horizon {
+            & ul {
+                & li {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1em;
+
+                    & h4 {
+                        color: var(--clr-indigo-vibe);
+                    }
+
+                    & h2 {
+                        color: var(--clr-white);
+                    }
+
+                    & p {
+                        color: var(--clr-soft-white);
+                    }
+                }
+            }
+        }
+
+        .btn-beyond-horizon {
+            display: flex;
+
+            & a {
+                background: var(--clr-white-transparent);
+                padding: 0.8em 1.5em;
+                border-radius: 0.5em;
+                color: var(--clr-white);
+                border: 1px solid var(--clr-transparent);
+                transition: transform .3s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.2);
+                    background: var(--clr-transparent);
+                    border: 1px solid var(--clr-white-transparent);
+                }
+            }
+        }
+
+    }
+
+    .img-beyond-horizon {
+        & img {
+            width: 500px;
+            cursor: pointer;
+            transition: transform .3s ease-in-out, filter .3s ease-in-out;
+
+            &:hover {
+                filter: brightness(50%) sepia(1) saturate(4) hue-rotate(180deg);
+                transform: scale(1.1);
+            }
+        }
+    }
+
+
+
+}
