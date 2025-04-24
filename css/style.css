@@ -409,15 +409,15 @@ header {
 
 /* #endregion features*/
 
+/* #region beyond-horizon*/
 
 #beyond-horizon {
     height: 100vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     display: flex;
     background: var(--clr-space-night);
-
     .container-beyond-horizon-txt {
         max-width: 550px;
         display: flex;
@@ -483,3 +483,82 @@ header {
 
 
 }
+
+/* #endregion beyond-horizon*/
+
+/* #region light-in-the-dark*/
+
+#light-in-the-dark {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: var(--clr-space-night);
+
+    .img-light-in-the-dark {
+        & img {
+            width: 500px;
+            cursor: pointer;
+            transition: transform .3s ease-in-out, filter .3s ease-in-out;
+
+            &:hover {
+                filter: brightness(50%) sepia(1) saturate(4) hue-rotate(180deg);
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .container-light-in-the-dark-txt {
+        max-width: 550px;
+        display: flex;
+        flex-direction: column;
+        gap: 4em;
+
+        .text-light-in-the-dark-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+
+            & h4 {
+                color: var(--clr-indigo-vibe);
+            }
+
+            & h2 {
+                color: var(--clr-white);
+            }
+
+            & .text-light-in-the-dark-paragraph {
+                color: var(--clr-soft-white);
+            }
+        }
+
+        .btn-light-in-the-dark {
+            display: flex;
+
+            & a {
+                background: var(--clr-white-transparent);
+                padding: 0.8em 1.5em;
+                border-radius: 0.5em;
+                color: var(--clr-white);
+                border: 1px solid var(--clr-transparent);
+                transition: transform .3s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.2);
+                    background: var(--clr-transparent);
+                    border: 1px solid var(--clr-white-transparent);
+                }
+            }
+        } 
+
+    }
+}
+
+/* #endregion light-in-the-dark*/
+
+
+
+
+
+
+
